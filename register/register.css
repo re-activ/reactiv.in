@@ -1,0 +1,206 @@
+/* all */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center; /*center vertically */
+  align-items: center; /* center horizontally */
+  background: #ffffff;
+  padding: 10px;
+}
+/* container and form */
+.container {
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 20px;
+  margin-top: 1rem;
+}
+.container .title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.container .title::before {
+  content: "";
+  position: absolute;
+  height:5.5px;
+  width: 35px;
+  background: #000000;
+  left: 0;
+  top: 2.3rem;
+  border-radius: 50px;
+}
+
+.container form .user__details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+/* inside the form user details */
+form .user__details .input__box {
+  width: calc(100% / 2 - 20px);
+  margin-bottom: 15px;
+}
+
+.user__details .input__box .details {
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+.user__details .input__box input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  background-color: #efefef;
+  border: none;
+  padding-left: 15px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.user__details .input__box input:focus,
+.user__details .input__box input:valid {
+  border-color: #000000;
+}
+
+/* inside the form gender details */
+
+form .gender__details .gender__title {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+form .gender__details .category {
+  display: flex;
+  width: 80%;
+  margin: 15px 0;
+  justify-content: space-between;
+}
+
+.gender__details .category label {
+  display: flex;
+  align-items: center;
+}
+
+.gender__details .category .dot {
+  height: 18px;
+  width: 18px;
+  background: #efefef;
+  border-radius: 50%;
+  margin: 10px;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+
+#dot-1:checked ~ .category .one,
+#dot-2:checked ~ .category .two,
+#dot-3:checked ~ .category .three {
+  border-color: #efefef;
+  background: #f59700;
+}
+
+form input[type="radio"] {
+  display: none;
+}
+
+/* join plan */
+
+form .plan__details .plan__title {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+form .plan__details .plancategory {
+  display: flex;
+  width: 80%;
+  margin: 15px 0;
+  justify-content: space-between;
+}
+
+.plan__details .plancategory label {
+  display: flex;
+  align-items: center;
+}
+
+.plan__details .plancategory .plandot {
+  height: 18px;
+  width: 18px;
+  background: #efefef;
+  border-radius: 50%;
+  margin: 10px;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+
+#plandot-1:checked ~ .plancategory .planone,
+#plandot-2:checked ~ .plancategory .plantwo,
+#plandot-3:checked ~ .plancategory .planthree {
+  border-color: #efefef;
+  background: #f59700;
+}
+
+form input[type="radio"] {
+  display: none;
+}
+
+/* submit button */
+form .button {
+  height: 45px;
+  margin: 45px 0;
+}
+
+form .button input {
+  height: 50px;
+  width: 130px;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 50px;
+  background: #000000;
+  transition: all 0.3s ease;
+}
+
+form .button input:hover {
+  background: #515151;
+}
+
+@media only screen and (max-width: 584px) {
+  .container {
+    max-width: 100%;
+    margin-top: -1rem;
+  }
+
+  form .user__details .input__box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  form .gender__details .category {
+    width: 100%;
+  }
+
+  form .plan__details .plancategory {
+    width: 100%;
+  }
+
+  .container form .user__details {
+    max-height: 310px;
+    overflow-y:scroll;
+  }
+}
